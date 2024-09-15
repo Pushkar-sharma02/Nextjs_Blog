@@ -1,17 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    async rewrites() {
-      return [
-        {
-          source: '/api/:path*',
-          destination: 'http://localhost:3001/api/:path*', // Proxy to your backend
-        },
-      ];
-    },
-    env: {
-      NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
-    },
-  };
-  
-  export default nextConfig;
-  
+  output: 'standalone',
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'https://nextjs-blog-hbrf.onrender.com/api/:path*',
+      },
+    ];
+  },
+};
+
+export default nextConfig;

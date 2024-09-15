@@ -22,7 +22,7 @@ export default function DeletePost({ postId }) {
   require('dotenv').config();
 
   const deletePost = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${postId}`, { method: 'DELETE' });
+    const res = await fetch(`https://nextjs-blog-hbrf.onrender.com/api/posts/${postId}`, { method: 'DELETE' });
     if (res.ok) {
       setOpen(false);
       router.refresh();

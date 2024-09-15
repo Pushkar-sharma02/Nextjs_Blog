@@ -4,7 +4,7 @@ require('dotenv').config();
 
 async function getPost(id) {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${id}`, { 
+    const res = await fetch(`https://nextjs-blog-hbrf.onrender.com/api/posts/${id}`, { 
       cache: 'no-store',
       headers: {
         'Content-Type': 'application/json',

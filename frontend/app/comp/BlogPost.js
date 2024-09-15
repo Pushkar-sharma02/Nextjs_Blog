@@ -2,7 +2,7 @@
 import BlogCard from './BlogCard';
 require('dotenv').config();
 async function getPosts() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`, { cache: 'no-store' });
+  const res = await fetch('https://nextjs-blog-hbrf.onrender.com/api/posts', { cache: 'no-store' });
   if (!res.ok) {
     throw new Error('Failed to fetch posts');
   }

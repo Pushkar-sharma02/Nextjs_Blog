@@ -16,7 +16,7 @@ export default function EditPostForm({ post }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${post.id}`, {
+    const response = await fetch(`https://nextjs-blog-hbrf.onrender.com/api/posts/${post.id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, content }),
